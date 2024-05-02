@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+#dummy-dork-div {
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Roboto Condensed', 'sans-serif';
+}
+
+#dd-title {
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-weight: 900;
+}
+
+.dd-card {
+    margin-top: 1rem;
+}
+
+.dd-card-header {
+    height: 5.5rem;
+}
+
+.dd-card-footer {
+    display: inherit;
+    align-items: end;
+    height: 5.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.carousel-item img{
+    object-fit:cover;
+    height:15rem;
+    overflow: hidden;
+}
+
+.not-bold {
+    font-weight: 400;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.bg-div {
+    position: absolute;
+    overflow: hidden;
+}
+
+.brain {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    height: 30rem;
+    left: -10rem;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.questionMark {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    right: -11rem;
+    top: -3rem;
+    height: 30rem;
+    rotate: 45deg;
+    z-index: 0;
+    transition: opacity 1s;
+}
+
+@media (max-width: 1800px) {
+  .brain {
+    opacity: 0;
+  }
+  .questionMark {
+    opacity: 0;
+  }
+}
