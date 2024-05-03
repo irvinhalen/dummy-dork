@@ -77,3 +77,50 @@
     opacity: 0;
   }
 }
+
+/* Start of Loading */
+
+.header-text {
+    color: #696969;
+    font-weight: 900;
+    font-size: 15rem;
+    user-select: none;
+}
+
+.error-text-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#cog-container {
+    display: flex;
+    align-items: center;
+}
+
+#animated-cog {
+    animation: cog-spin 3500ms ease infinite;
+}
+
+@keyframes cog-spin {
+    0% {
+        transform: rotate(60deg);
+    }
+    20% {
+        transform: rotate(120deg);
+    }
+    40% {
+        transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(240deg);
+    }
+    80% {
+        transform: rotate(300deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* End of Loading */

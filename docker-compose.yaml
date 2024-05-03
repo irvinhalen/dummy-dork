@@ -1,0 +1,37 @@
+services:
+
+  frontend:
+    container_name: React
+    build:
+      context: ./dummy-dork_frontend/
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./dummy-dork_frontend:/app/frontend
+      - /app/frontend/node_modules
+    depends_on:
+      - backend
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - app
+
+  backend:
+    container_name: Laravel
+    build:
+      context: ./dummy-dork_backend
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    volumes:
+      - ./dummy-dork_backend:/app/backend
+      - ./logs:/app/backend/storage/logs/
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
